@@ -44,10 +44,31 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 
+
 const navLinks = document.querySelectorAll ('nav a');
-navLinks [0].textContent = siteContent['nav']['nav-item-1'];
-navLinks [1].textContent = siteContent['nav']['nav-item-2'];
-navLinks [2].textContent = siteContent['nav']['nav-item-3'];
-navLinks [3].textContent = siteContent['nav']['nav-item-4'];
-navLinks [4].textContent = siteContent['nav']['nav-item-5'];
-navLinks [5].textContent = siteContent['nav']['nav-item-6'];
+// navLinks [0].textContent = siteContent['nav']['nav-item-1'];
+// navLinks [1].textContent = siteContent['nav']['nav-item-2'];
+// navLinks [2].textContent = siteContent['nav']['nav-item-3'];
+// navLinks [3].textContent = siteContent['nav']['nav-item-4'];
+// navLinks [4].textContent = siteContent['nav']['nav-item-5'];
+// navLinks [5].textContent = siteContent['nav']['nav-item-6'];
+
+navLinks.forEach((link, index) => {
+  link.textContent = siteContent ['nav'][`nav-item-${index+1}`]
+})
+
+
+
+const allNavLinks = document.querySelectorAll('nav a');
+
+allNavLinks.forEach((link) => {
+  link.style.color = 'black';
+})
+
+//------------------------- CTA SECTION HERE --------------------------------------------------//
+domIsAwesomeH1 = document.querySelector('.cta-text h1').innerHTML = siteContent['cta']['h1'];
+domIsAwesomeButton = document.querySelector('.cta-text button').innerHTML = siteContent['cta']['button'];
+domIsAwesomeImg = document.querySelector('.cta img').src = siteContent['cta']['img-src'];
+
+//---------------------- MAIN CONTENT -------------------------------------------------------//
+
